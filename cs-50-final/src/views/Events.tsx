@@ -36,6 +36,9 @@ function Events() {
     <div>
       <h2>Concerts</h2>
 
+      {fetchStateEvents === FetchState.DEFAULT && (
+        <button onClick={getEvents}>Get Events</button>
+      )}
       {fetchStateEvents === FetchState.LOADING && <p>Loading...</p>}
       {fetchStateEvents === FetchState.ERROR && <p>There was an error</p>}
       {fetchStateEvents === FetchState.SUCCESS && (
